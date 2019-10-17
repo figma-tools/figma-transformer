@@ -1,6 +1,6 @@
 {
     "name": "figma-transformer",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "license": "MIT",
     "keywords": [
         "figma",
@@ -46,15 +46,12 @@
     },
     "devDependencies": {
         "@types/jest": "^24.0.19",
-        "@types/lodash": "^4.14.144",
         "husky": "^3.0.9",
         "tsdx": "^0.10.5",
         "tslib": "^1.10.0",
         "typescript": "^3.6.4"
     },
     "dependencies": {
-        "figma-js": "^1.8.5",
-        "lodash": "^4.17.15",
-        "lodash-es": "^4.17.15"
+        "figma-js": "^1.8.5"
     }
 }

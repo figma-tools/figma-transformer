@@ -3,7 +3,10 @@ import testFile from "./testFile";
 import { FileResponse } from "figma-js";
 
 describe("processFile", () => {
-    const fileResponse = processFile(testFile as FileResponse, "cLp23bR627jcuNSoBGkhL04E");
+    const fileResponse = processFile(
+        testFile as FileResponse,
+        "cLp23bR627jcuNSoBGkhL04E"
+    );
 
     it("should have correct structure", () => {
         expect(Object.keys(fileResponse)).toEqual([
