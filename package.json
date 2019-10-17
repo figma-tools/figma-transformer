@@ -27,6 +27,7 @@
         "test": "tsdx test",
         "lint": "tsdx lint"
     },
+    "sideEffects": false,
     "peerDependencies": {},
     "husky": {
         "hooks": {
