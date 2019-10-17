@@ -1,15 +1,6 @@
-import { Document, FileResponse, Node } from "figma-js";
+import { Document, FileResponse } from "figma-js";
 import { groupNodes } from "./utils";
-
-type CustomFileResponse = {
-    fileId: string;
-    name: string;
-    lastModified: string;
-    thumbnailUrl: string;
-    version: string;
-    children: any;
-    shortcuts: Record<string, Node[]>;
-};
+import { CustomFileResponse } from "./types";
 
 export function processFile(
     data: FileResponse,
