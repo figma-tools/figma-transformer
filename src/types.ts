@@ -1,6 +1,6 @@
 import { Node, NodeType } from "figma-js";
 
-export type Shortcut = NodeType & "STYLE";
+export type Shortcut = NodeType | "STYLE";
 
 export type CustomFileResponse = {
     fileId: string;
