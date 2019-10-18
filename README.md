@@ -41,7 +41,7 @@ From the API we can get the information about the styles and components that are
 
 Let's look at how the Figma API describes the styles in a document:
 
-```json
+```js
 styles: {
     "1:12": {
         key: "ea017aed6616af00f3c4d59e3d945c8c3e47adca",
@@ -66,7 +66,7 @@ styles: {
 
 and this is how it's represented after being processed (note the populated styles from the associated nodes)
 
-```json
+```js
 [
     {
         "id": "1:12",
@@ -145,7 +145,7 @@ and this is how it's represented after being processed (note the populated style
 
 The same happens with the components, this is what we get from the API:
 
-```json
+```js
 components: {
     "1:5": { key: "", name: "Rectangle", description: "" },
 },
@@ -153,7 +153,7 @@ components: {
 
 and this is the processed data:
 
-```json
+```js
 {
     "id": "1:5",
     "parentId": "7:0",
