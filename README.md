@@ -2,6 +2,12 @@
 
 Utility library to transform the Figma API response into something more human friendly.
 
+[![npm version][version-badge]][npm]
+[![npm downloads][downloads-badge]][npm]
+[![gzip size][size-badge]][size]
+[![MIT License][license-badge]][license]
+[![PRs Welcome][prs-badge]][prs]
+
 ## Which problems does this solve?
 
 **Break free from the file structure**
@@ -241,3 +247,14 @@ The package is optimized and bundled with Rollup into multiple formats (CommonJS
 
 Runs the test watcher (Jest) in an interactive mode.
 By default, runs tests related to files changed since the last commit.
+
+[npm]: https://www.npmjs.com/package/figma-transformer
+[license]: https://github.com/braposo/figma-transformer/blob/master/LICENSE
+[prs]: http://makeapullrequest.com
+[size]: https://unpkg.com/figma-transformer/dist/figma-transformer.cjs.production.min.js
+[version-badge]: https://img.shields.io/npm/v/figma-transformer.svg?style=flat-square
+[downloads-badge]: https://img.shields.io/npm/dm/figma-transformer.svg?style=flat-square
+[license-badge]: https://img.shields.io/npm/l/figma-transformer.svg?style=flat-square
+[size-badge]: http://img.badgesize.io/https://unpkg.com/figma-transformer/dist/figma-transformer.min.js?compression=gzip&style=flat-square
+[modules-badge]: https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat-square
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
