@@ -2,7 +2,7 @@ import { Node, NodeType } from "figma-js";
 
 export type Shortcut = NodeType | "STYLE";
 
-export type CustomFileResponse = {
+export type ProcessedFile = {
     fileId: string;
     name: string;
     lastModified: string;

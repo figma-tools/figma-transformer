@@ -1,11 +1,8 @@
 import { Document, FileResponse } from "figma-js";
 import { groupNodes } from "./utils";
-import { CustomFileResponse } from "./types";
+import { ProcessedFile } from "./types";
 
-export function processFile(
-    data: FileResponse,
-    id: string
-): CustomFileResponse {
+export function processFile(data: FileResponse, id: string): ProcessedFile {
     const {
         name,
         lastModified,
