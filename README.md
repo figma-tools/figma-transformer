@@ -5,6 +5,7 @@ Utility library to transform the Figma API response into something more human fr
 [![npm version][version-badge]][npm]
 [![npm downloads][downloads-badge]][npm]
 [![gzip size][size-badge]][size]
+[![modules][modules-badge]]
 [![MIT License][license-badge]][license]
 [![PRs Welcome][prs-badge]][prs]
 
@@ -255,6 +256,6 @@ By default, runs tests related to files changed since the last commit.
 [version-badge]: https://img.shields.io/npm/v/figma-transformer.svg?style=flat-square
 [downloads-badge]: https://img.shields.io/npm/dm/figma-transformer.svg?style=flat-square
 [license-badge]: https://img.shields.io/npm/l/figma-transformer.svg?style=flat-square
-[size-badge]: http://img.badgesize.io/https://unpkg.com/figma-transformer/dist/figma-transformer.min.js?compression=gzip&style=flat-square
-[modules-badge]: https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat-square
+[size-badge]: http://img.badgesize.io/https://unpkg.com/figma-transformer/dist/figma-transformer.cjs.production.min.js?compression=gzip&style=flat-square
+[modules-badge]: https://img.shields.io/badge/module%20formats-cjs%2C%20esm-green.svg?style=flat-square
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
