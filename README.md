@@ -1,6 +1,6 @@
 # figma-transformer
 
-Utility library to transform the Figma API response into something more human friendly.
+Tiny utility library to transform the Figma API response into something more human friendly.
 
 [![npm version][version-badge]][npm]
 [![npm downloads][downloads-badge]][npm]
@@ -12,11 +12,12 @@ Utility library to transform the Figma API response into something more human fr
 ## Which problems does this solve?
 
 **Break free from the file structure**
+
 The Figma API response is very strict in terms of the file structure. To get to a specific node you have to navigate through the entire tree of nodes and it's really easy for your code to break if there's a change in the design file that changes the initial hierarchy.
 
 We break from that rigid structure by creating shortcuts that are grouped by node type, making it a lot easier to access the nodes that we want irrespective of their placement in the file.
 
-```json
+```js
 {
     "children": [{...}, {...}],
     "shortcuts": {
@@ -37,6 +38,7 @@ We can see that even though this node just has two direct children, it actually 
 Each node of the document tree contains the shortcuts to all their respective child nodes, which reduces the amount of work needed to get to the information we need.
 
 **Missing information from nodes**
+
 From the API we can get the information about the styles and components that are present in the file, which is great, but it doesn't contain all the information so we need to parse the entire file to get the additional information that we usuallly need.
 
 Let's look at how the Figma API describes the styles in a document:
@@ -227,8 +229,6 @@ const fills = data.shortcuts.CANVAS.filter(page => page.name === "Page 1").map(
 
 ---
 
-_This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx)._
-
 ## Local Development
 
 Below is a list of commands you will probably find useful.
@@ -248,6 +248,8 @@ The package is optimized and bundled with Rollup into multiple formats (CommonJS
 
 Runs the test watcher (Jest) in an interactive mode.
 By default, runs tests related to files changed since the last commit.
+
+_This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx)._
 
 [npm]: https://www.npmjs.com/package/figma-transformer
 [license]: https://github.com/braposo/figma-transformer/blob/master/LICENSE
