@@ -5,7 +5,7 @@ Utility library to transform the Figma API response into something more human fr
 [![npm version][version-badge]][npm]
 [![npm downloads][downloads-badge]][npm]
 [![gzip size][size-badge]][size]
-[![modules][modules-badge]]
+![modules][modules-badge]
 [![MIT License][license-badge]][license]
 [![PRs Welcome][prs-badge]][prs]
 
