@@ -25,7 +25,8 @@
         "start": "tsdx watch",
         "build": "tsdx build",
         "test": "tsdx test",
-        "lint": "tsdx lint"
+        "lint": "tsdx lint",
+        "prepublishOnly": "yarn build"
     },
     "sideEffects": false,
     "peerDependencies": {},
