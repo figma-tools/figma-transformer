@@ -1,4 +1,10 @@
-import { Document, FileResponse } from "figma-js";
+import {
+    Document,
+    FileResponse,
+    Style,
+    ComponentMetadata,
+    Node,
+} from "figma-js";
 import { groupNodes } from "./utils";
 import { ProcessedFile } from "./types";
 
@@ -10,11 +16,13 @@ export function processFile(data: FileResponse, id: string): ProcessedFile {
         version,
         document,
         styles,
+        components,
     } = data;
 
     const [processedNodes, processedShortcuts] = processNodes(
         document,
         styles,
+        components,
         id
     );
 
@@ -31,10 +39,12 @@ export function processFile(data: FileResponse, id: string): ProcessedFile {
 
 export function processNodes(
     nodes: Document,
-    documentStyles: { [key: string]: any },
+    documentStyles: { [key: string]: Style },
+    components: { [key: string]: ComponentMetadata },
     fileId: string
 ) {
     const parsedStyles = new Map(Object.entries(documentStyles));
+    const parsedComponents = new Map(Object.entries(components));
 
     const traverseChildren = (node: any, parentId: string) => {
         const { id, styles, children, ...rest } = node;
@@ -64,7 +74,7 @@ export function processNodes(
         // so we're going to recursively go through them
         // and combine everything
         const [parsedChildren, shortcuts] = children.reduce(
-            (acc: [any[], any[]], child: any) => {
+            (acc: [Node[], Node[]], child: Node) => {
                 const [accChildren, accShortcuts] = acc;
                 const [tChildren, tShortcuts] = traverseChildren(child, id);
                 return [
@@ -75,6 +85,8 @@ export function processNodes(
             [[], []]
         );
 
+        const componentInfo = parsedComponents.get(id);
+
         // Finally we return the parsed node with the
         // parsed children grouped by type
         const parsedNode = {
@@ -82,6 +94,7 @@ export function processNodes(
             parentId,
             fileId,
             ...rest,
+            ...(componentInfo && componentInfo),
             children: parsedChildren,
             shortcuts: groupNodes(shortcuts),
         };
