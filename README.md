@@ -71,78 +71,78 @@ and this is how it's represented after being processed (note the populated style
 ```js
 [
     {
-        "id": "1:12",
-        "key": "ea017aed6616af00f3c4d59e3d945c8c3e47adca",
-        "name": "Green",
-        "styleType": "FILL",
-        "description": "",
-        "styles": [
+        id: "1:12",
+        key: "ea017aed6616af00f3c4d59e3d945c8c3e47adca",
+        name: "Green",
+        styleType: "FILL",
+        description: "",
+        styles: [
             {
-                "blendMode": "NORMAL",
-                "type": "SOLID",
-                "color": {
-                    "r": 0.047774821519851685,
-                    "g": 0.9563318490982056,
-                    "b": 0.02923285961151123,
-                    "a": 1
-                }
-            }
+                blendMode: "NORMAL",
+                type: "SOLID",
+                color: {
+                    r: 0.047774821519851685,
+                    g: 0.9563318490982056,
+                    b: 0.02923285961151123,
+                    a: 1,
+                },
+            },
         ],
-        "type": "STYLE"
+        type: "STYLE",
     },
     {
-        "id": "1:11",
-        "key": "e234400b962ffafce654af9b3220ce88857523ec",
-        "name": "Red",
-        "styleType": "FILL",
-        "description": "",
-        "styles": [
+        id: "1:11",
+        key: "e234400b962ffafce654af9b3220ce88857523ec",
+        name: "Red",
+        styleType: "FILL",
+        description: "",
+        styles: [
             {
-                "blendMode": "NORMAL",
-                "type": "SOLID",
-                "color": {
-                    "r": 0.8515284061431885,
-                    "g": 0.11155396699905396,
-                    "b": 0.11155396699905396,
-                    "a": 1
-                }
-            }
+                blendMode: "NORMAL",
+                type: "SOLID",
+                color: {
+                    r: 0.8515284061431885,
+                    g: 0.11155396699905396,
+                    b: 0.11155396699905396,
+                    a: 1,
+                },
+            },
         ],
-        "typeStyles": {
-            "fontFamily": "Roboto",
-            "fontPostScriptName": null,
-            "fontWeight": 400,
-            "fontSize": 12,
-            "textAlignHorizontal": "LEFT",
-            "textAlignVertical": "TOP",
-            "letterSpacing": 0,
-            "lineHeightPx": 14.0625,
-            "lineHeightPercent": 100,
-            "lineHeightUnit": "INTRINSIC_%"
+        typeStyles: {
+            fontFamily: "Roboto",
+            fontPostScriptName: null,
+            fontWeight: 400,
+            fontSize: 12,
+            textAlignHorizontal: "LEFT",
+            textAlignVertical: "TOP",
+            letterSpacing: 0,
+            lineHeightPx: 14.0625,
+            lineHeightPercent: 100,
+            lineHeightUnit: "INTRINSIC_%",
         },
-        "type": "STYLE"
+        type: "STYLE",
     },
     {
-        "id": "97:6",
-        "key": "cc806814e1b9b7d20ce0b6bed8adf52099899c01",
-        "name": "Body",
-        "styleType": "TEXT",
-        "description": "",
-        "typeStyles": {
-            "fontFamily": "Roboto",
-            "fontPostScriptName": null,
-            "fontWeight": 400,
-            "fontSize": 12,
-            "textAlignHorizontal": "LEFT",
-            "textAlignVertical": "TOP",
-            "letterSpacing": 0,
-            "lineHeightPx": 14.0625,
-            "lineHeightPercent": 100,
-            "lineHeightUnit": "INTRINSIC_%"
+        id: "97:6",
+        key: "cc806814e1b9b7d20ce0b6bed8adf52099899c01",
+        name: "Body",
+        styleType: "TEXT",
+        description: "",
+        typeStyles: {
+            fontFamily: "Roboto",
+            fontPostScriptName: null,
+            fontWeight: 400,
+            fontSize: 12,
+            textAlignHorizontal: "LEFT",
+            textAlignVertical: "TOP",
+            letterSpacing: 0,
+            lineHeightPx: 14.0625,
+            lineHeightPercent: 100,
+            lineHeightUnit: "INTRINSIC_%",
         },
-        "type": "STYLE"
-    }
-]
+        type: "STYLE",
+    },
+];
 ```
 
 The same happens with the components, this is what we get from the API:
@@ -226,6 +226,10 @@ const fills = data.shortcuts.CANVAS.filter(page => page.name === "Page 1").map(
     page => page.shortcuts.RECTANGLE.fills
 );
 ```
+
+## Projects using figma-transformer
+
+-   [figma-graphql](https://github.com/braposo/figma-graphql)
 
 ---
 
