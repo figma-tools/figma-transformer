@@ -230,6 +230,7 @@ const fills = data.shortcuts.CANVAS.filter(page => page.name === "Page 1").map(
 ## Projects using figma-transformer
 
 -   [figma-graphql](https://github.com/braposo/figma-graphql)
+-   [theme.figma](https://github.com/ds-tools/theme.figma)
 
 ---
 
