@@ -2,6 +2,10 @@ import { Node, NodeType } from "figma-js";
 
 export type Shortcut = NodeType | "STYLE";
 
+export type TransformedNode = Node & { shortcuts?: Shortcuts };
+
+export type Shortcuts = Record<Shortcut, TransformedNode[]>;
+
 export type ProcessedFile = {
     fileId: string;
     name: string;
@@ -9,5 +13,5 @@ export type ProcessedFile = {
     thumbnailUrl: string;
     version: string;
     children: any;
-    shortcuts: Record<Shortcut, Node[]>;
+    shortcuts: Shortcuts;
 };
