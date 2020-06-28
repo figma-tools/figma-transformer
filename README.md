@@ -22,7 +22,7 @@ A tiny (< 1KB) utility library that transforms the Figma API response into somet
 ## How to use `figma-transformer`?
 
 ```js
-import processFile from 'figma-transformer';
+import { processFile } from "figma-transformer";
 
 // Fetch the file you want using your favourite method
 const originalFile = fetchFigmaFile();
@@ -32,10 +32,9 @@ const file = processFile(originalFile);
 // ✨ You can now use `file` for whatever you need! ✨
 
 // Let's get the styles for a component named "Test"
-const testStyles = file.shortcuts.components
-    .find(component => component.name === "Test")
-    .shortcuts.styles;
-
+const testStyles = file.shortcuts.components.find(
+    component => component.name === "Test"
+).shortcuts.styles;
 ```
 
 ## Why use `figma-transformer`?
