@@ -8,7 +8,7 @@ import {
 import { groupNodes } from "./utils";
 import { ProcessedFile } from "./types";
 
-export function processFile(data: FileResponse, id: string): ProcessedFile {
+export function processFile(data: FileResponse, id?: string): ProcessedFile {
     const {
         name,
         lastModified,
@@ -41,7 +41,7 @@ export function processNodes(
     nodes: Document,
     documentStyles: { [key: string]: Style },
     components: { [key: string]: ComponentMetadata },
-    fileId: string
+    fileId?: string
 ) {
     const parsedStyles = new Map(Object.entries(documentStyles));
     const parsedComponents = new Map(Object.entries(components));
