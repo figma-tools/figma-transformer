@@ -25,14 +25,14 @@ A tiny (< 1KB) utility library that transforms the Figma API response into somet
 import processFile from 'figma-transformer';
 
 // Fetch the file you want using your favourite method
-...
+const originalFile = fetchFigmaFile();
 
-const fileData = processFile(originalFile);
+const file = processFile(originalFile);
 
-// ✨ You can now use `fileData` for whatever you need! ✨
+// ✨ You can now use `file` for whatever you need! ✨
 
 // Let's get the styles for a component named "Test"
-const testStyles = data.shortcuts.components
+const testStyles = file.shortcuts.components
     .find(component => component.name === "Test")
     .shortcuts.styles;
 
@@ -255,13 +255,13 @@ Let's see more specific examples where the benefits of the library really stand 
 **Getting all text used in a document**
 
 ```js
-const text = data.shortcuts.texts.map(node => node.characters);
+const text = file.shortcuts.texts.map(node => node.characters);
 ```
 
 **Finding the styles applied to a specific component**
 
 ```js
-const styles = data.shortcuts.components
+const styles = file.shortcuts.components
     .filter(component => component.name === "Test")
     .map(component => component.shortcuts.styles);
 ```
@@ -269,7 +269,7 @@ const styles = data.shortcuts.components
 **Getting the fill colours for all the rectangles in the first page**
 
 ```js
-const fills = data.shortcuts.pages
+const fills = file.shortcuts.pages
     .filter(page => page.name === "Page 1")
     .map(page => page.shortcuts.rectangles.fills);
 ```
