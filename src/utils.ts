@@ -1,16 +1,41 @@
 import { Node } from "figma-js";
-import { Shortcut } from "./types";
+import { Shortcuts, ShortcutType } from "./types";
 
-function uniqBy(arr: any[], fn: string, set = new Set()) {
-    return arr.filter(el => (v => !set.has(v) && set.add(v))(el[fn]));
+export function uniqBy(arr: any[], key: string, set = new Set()) {
+    return arr.filter(el => (v => !set.has(v) && set.add(v))(el[key]));
 }
 
-function groupBy(arr: any[], key: string) {
+export function groupBy(arr: any[], key: string) {
     return arr.reduce(function(rv, x) {
         (rv[x[key]] = rv[x[key]] || []).push(x);
         return rv;
     }, {});
 }
 
-export const groupNodes = (nodes: Node[]): Record<Shortcut, Node[]> =>
-    groupBy(uniqBy(nodes, "id"), "type");
+export const groupNodes = (nodes: Node[]): Shortcuts =>
+    parseShortcutKeys(groupBy(uniqBy(nodes, "id"), "type"));
+
+export const parseShortcutKeys = (obj: Record<string, any>): Shortcuts => {
+    const mapKeys: Record<ShortcutType, string> = {
+        DOCUMENT: "documents",
+        COMPONENT: "components",
+        CANVAS: "pages",
+        LINE: "lines",
+        INSTANCE: "instances",
+        FRAME: "frames",
+        GROUP: "groups",
+        VECTOR: "vectors",
+        BOOLEAN: "booleans",
+        STAR: "stars",
+        ELLIPSE: "ellipses",
+        REGULAR_POLYGON: "regularPolygon",
+        RECTANGLE: "rectangles",
+        TEXT: "texts",
+        SLICE: "slices",
+        STYLE: "styles",
+    };
+
+    return Object.fromEntries(
+        Object.entries(obj).map(([k, v]) => [mapKeys[k as ShortcutType], v])
+    ) as Shortcuts;
+};
