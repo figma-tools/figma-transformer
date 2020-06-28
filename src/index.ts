@@ -59,7 +59,7 @@ export function processNodes(
                     id: styleId,
                     ...documentStyle,
                     styles: node[`${key}s`],
-                    typeStyles: node.style,
+                    textStyles: node.style,
                     type: "STYLE",
                 };
             });
