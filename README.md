@@ -1,4 +1,5 @@
 <p align="center">
+    <br/>
     <img width="100" src="./figma-transformer.svg" />
 </p>
 
@@ -8,7 +9,7 @@ figma-transformer
 
 <div align="center">
 
-A tiny (< 1KB) utility library that transforms the Figma API response into something more human friendly.
+A tiny utility library that makes the Figma API more human friendly. 
 
 [![npm version][version-badge]][npm]
 [![npm downloads][downloads-badge]][npm]
@@ -43,7 +44,7 @@ The Figma API is great but sometimes it feels like it's built for machines, not 
 
 These are the most common problems:
 
--   Rigid file structure
+-   Code needs to change if file structure changes
 -   Incomplete information about styles and components
 -   No type safety
 
