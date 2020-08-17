@@ -2617,10 +2617,10 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
-figma-js@^1.10.1:
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/figma-js/-/figma-js-1.10.1.tgz#6560ea7234df28f54e4fa2cbf910a767de49e68f"
-  integrity sha512-CCVLnJLJaFZVeFLDTTab99yCkRNhKnRD6Kh3lwmWzvL4UF5VdwwfhrV9PC0TS1O3CU4zGea7NGsFvJFQexPwOw==
+figma-js@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/figma-js/-/figma-js-1.11.0.tgz#9c11ec1d91ddb5ca06bc6261e617fe2e58cad41f"
+  integrity sha512-O/spp7yqA3bKct78XXnGn1yz7cR6z2AnLIcZToo3u/gM7hjdtiMou5O9XInKxzWLGoKO+u+zLGDSqTfEXuPHzw==
   dependencies:
     axios "^0.18.0"
 
