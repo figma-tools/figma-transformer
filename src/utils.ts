@@ -1,4 +1,5 @@
 import { Node } from "figma-js";
+import fromEntries from "object.fromentries";
 import { Shortcuts, ShortcutType } from "./types";
 
 export function uniqBy(arr: any[], key: string, set = new Set()) {
@@ -35,7 +36,7 @@ export const parseShortcutKeys = (obj: Record<string, any>): Shortcuts => {
         STYLE: "styles",
     };
 
-    return Object.fromEntries(
+    return fromEntries(
         Object.entries(obj).map(([k, v]) => [mapKeys[k as ShortcutType], v])
     ) as Shortcuts;
 };
