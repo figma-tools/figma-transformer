@@ -1448,13 +1448,12 @@ axe-core@^3.5.4:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-3.5.5.tgz#84315073b53fa3c0c51676c588d59da09a192227"
   integrity sha512-5P0QZ6J5xGikH780pghEdbEKijCTrruK9KxtPZCFWUpef0f6GipO+xEZ5GKCb020mmqgbiNO6TcA55CriL784Q==
 
-axios@^0.18.0:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.1.tgz#ff3f0de2e7b5d180e757ad98000f1081b87bcea3"
-  integrity sha512-0BfJq4NSfQXd+SkFdrvFbG7addhYSBA2mQwISr46pD6E5iqkWg02RAs8vyTT/j0RTnoYmeXauBuSv1qKwR179g==
+axios@^0.19.0:
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
+  integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
   dependencies:
     follow-redirects "1.5.10"
-    is-buffer "^2.0.2"
 
 axobject-query@^2.1.2:
   version "2.2.0"
@@ -2633,12 +2632,12 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
-figma-js@^1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/figma-js/-/figma-js-1.11.0.tgz#9c11ec1d91ddb5ca06bc6261e617fe2e58cad41f"
-  integrity sha512-O/spp7yqA3bKct78XXnGn1yz7cR6z2AnLIcZToo3u/gM7hjdtiMou5O9XInKxzWLGoKO+u+zLGDSqTfEXuPHzw==
+figma-js@^1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/figma-js/-/figma-js-1.13.0.tgz#0656b99875c8c0cd2b9a5cb8a1c031d14ebc6f4e"
+  integrity sha512-YBYxKHzZ3vfjxU2RldJ6ZWGaXGrXlqwef7lKgpDIIMr2dAG4xNkwLj31UiQhw1kzdkABhxiDJBJgVGMKwEogfA==
   dependencies:
-    axios "^0.18.0"
+    axios "^0.19.0"
 
 figures@^3.0.0:
   version "3.2.0"
@@ -3117,11 +3116,6 @@ is-buffer@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
-
-is-buffer@^2.0.2:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.4.tgz#3e572f23c8411a5cfd9557c849e3665e0b290623"
-  integrity sha512-Kq1rokWXOPXWuaMAqZiJW4XxsmD9zGx9q4aePabbn3qCRGedtH7Cm+zV8WETitMfu1wdh+Rvd6w5egwSngUX2A==
 
 is-callable@^1.1.4, is-callable@^1.2.0:
   version "1.2.0"
