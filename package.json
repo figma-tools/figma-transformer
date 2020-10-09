@@ -35,7 +35,7 @@
         }
     },
     "devDependencies": {
-        "@types/jest": "^26.0.10",
+        "@types/jest": "^26.0.14",
         "@types/object.fromentries": "^2.0.0",
         "figma-js": "^1.13.0",
         "husky": "^4.3.0",
