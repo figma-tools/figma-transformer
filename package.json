@@ -25,7 +25,9 @@
         "start": "tsdx watch",
         "build": "tsdx build",
         "test": "tsdx test",
-        "lint": "tsdx lint src"
+        "lint": "tsdx lint src",
+        "prepublishOnly": "yarn validate",
+        "validate": "yarn test --coverage && yarn lint --fix && yarn build && bundlesize"
     },
     "sideEffects": false,
     "peerDependencies": {},
@@ -37,11 +39,18 @@
     "devDependencies": {
         "@types/jest": "^26.0.14",
         "@types/object.fromentries": "^2.0.0",
+        "bundlesize": "^0.18.0",
         "figma-js": "^1.13.0",
         "husky": "^4.3.0",
         "object.fromentries": "^2.0.2",
         "tsdx": "^0.14.0",
         "typescript": "3.9.7"
     },
-    "dependencies": {}
+    "dependencies": {},
+    "bundlesize": [
+        {
+            "path": "./dist/figma-transformer.cjs.production.min.js",
+            "maxSize": "1.1 kB"
+        }
+    ]
 }

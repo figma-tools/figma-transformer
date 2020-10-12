@@ -2,7 +2,8 @@ import { Node } from "figma-js";
 import fromEntries from "object.fromentries";
 import { Shortcuts, ShortcutType } from "./types";
 
-export function uniqBy(arr: any[], key: string, set = new Set()) {
+export function uniqBy(arr: any[], key: string) {
+    const set = new Set();
     return arr.filter(el => (v => !set.has(v) && set.add(v))(el[key]));
 }
 
