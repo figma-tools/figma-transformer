@@ -41,7 +41,7 @@
         "bundlesize": "^0.18.0",
         "figma-js": "^1.13.0",
         "husky": "^4.3.0",
-        "tsdx": "^0.14.0",
+        "tsdx": "^0.14.1",
         "typescript": "3.9.7"
     },
     "dependencies": {},
